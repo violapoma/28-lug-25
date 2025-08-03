@@ -1,0 +1,241 @@
+:root{
+  --theme-color: #D3CBFF;
+  --theme-color-opacity: #d3cbffc1;
+  --button-color: #ac9ff7ce; 
+  --button-color-hover: #ac9ff7;
+  --success-bg: #A4C3B3; 
+  --success-txt: #3B513F;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 0px;
+}
+a {
+  text-decoration: none;
+}
+.alert{
+  background-color: var(--theme-color);
+  color: black;
+  text-shadow: 0 0 2px white;
+  font-size: 2em;
+  border: none;
+}
+
+.form-control:focus,
+.form-select:focus,
+.accordion-button:focus {
+  border-color: var(--theme-color);
+  box-shadow: 0 0 5px var(--bs-purple);
+  outline: none;
+}
+.accordion-button, .accordion-button:not(.collapsed){
+  background-color: var(--theme-color-opacity);
+  box-shadow: none;
+}
+
+.clearInputBtn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.pagination .page-item .page-link{
+  color: blueviolet;
+}
+.pagination .page-item.disabled .page-link{
+  background-color: var(--theme-color-opacity);
+  color: var(--button-color);
+}
+.pagination .page-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+.pagination .page-item.active .page-link {
+  background-color: var(--button-color-hover);
+  border-color: var(--button-color-hover) !important;
+  color: white;
+}
+
+.submitBtn{
+  background-color: var(--button-color);
+  border: none;
+  color: rgb(39, 30, 45);
+}
+.submitBtn:hover{
+  background-color: var(--button-color-hover);
+  transform: scale(1.02);
+  transition: transform 0.2s linear;
+  color: unset;
+}
+
+.borderSelected {
+  border: 2px solid var(--theme-color);
+}
+
+.cardStyle {
+  transform: scale(1);
+  max-height: 50vh;
+  overflow: hidden;
+  transition: transform 0.3s ease, max-height 0.5s ease;
+}
+
+.cardStyle:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0px 0px 10px var(--bs-purple);
+}
+
+.cardStyle.selected {
+  max-height: 1000px; /
+}
+
+.cardImg {
+  object-fit: contain;
+  width: 150px; 
+  height: 150px;
+  align-self: center;
+}
+
+.commentArea{
+  height: 80%;
+  width: 100%;
+  overflow-y: hidden ;
+} 
+
+.commentList{
+  height: 100%;
+  width: 100% !important;
+
+  transition: height 0.3s ease;
+}
+.reduced{
+  height: 60%;
+}
+.bookDetailsImg{
+  display: block;
+  max-width: 90%;
+  height: 100%;
+  object-fit: contain;
+
+}
+
+
+.commentList li{
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+  border-radius: 10px;
+}
+.commentList li:nth-child(odd){
+  background-color: var(--theme-color);
+}
+.commentList li:nth-child(even){
+  background-color:  var(--button-color);
+}
+
+.commentAuthor{
+  font-size: 1rem;
+}
+.authorIcon{
+  font-size: 1.5em;
+  padding-right: 0.3em ;
+  color: darkslateblue;
+}
+ul, li {
+  padding-left: 0 !important;
+}
+.commentBody{
+  padding-left: 2em ;
+}
+
+.successBadge{
+  position: absolute;
+  right: 0.5em;
+  background-color: var(--success-bg) !important;
+  color: var(--success-txt) !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(0%);
+
+  }
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .cardStyle {
+    min-height: 320px;
+  }
+  .cardImg {
+    width: 300px; 
+    height: 300px;
+    align-self: flex-start;
+  }
+  .commentList {
+    width: 45vw;
+  }
+
+}
+/* md */
+@media (min-width: 768px) {
+  .commentList {
+    width: 250px;
+  }
+  .cardImg{
+    align-self: center;
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  .commentList {
+    padding-left: 1em;
+    width: 350px;
+  }
+
+  .movingTitle {
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+  }
+
+  .movingTitle span {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+    .movingTitle:hover span.marquee-hover {
+      animation: marquee 8s linear infinite;
+      width: max-content; 
+      overflow: visible;
+    }
+}
+
+.borderHighlight {
+  border: 1px solid fuchsia;
+}
