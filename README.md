@@ -1,7 +1,7 @@
 # EpiBook con React ~ _final version_
 
 ## Struttura componenti
-![React Component Tree](./docs/react-tree.png)
+![React Component Tree](./docs/react-component-tree.png)
 
 ## Test implementati
 - **MyAlert** viene renderizzato correttamente 
