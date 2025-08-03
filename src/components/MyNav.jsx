@@ -33,21 +33,21 @@ function MyNav() {
 
   return (
     <Navbar bg="dark" data-bs-theme="dark" expand="md">
-      <Container>
-        {/* end -> mette la classe active solo su questo pezzo dell'indirizzo */}
-        <Navbar.Brand as={Link} to="/" className="fs-1"> 
-          EpiBooks <span className="fs-3">📚</span>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#">About</Nav.Link>
-            <Nav.Link href="#">Browse</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+    <Container>
+      <Navbar.Brand as={Link} to="/" className="fs-1">
+        EpiBooks <span className="fs-3">📚</span>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  
+      {/* Rimosso Navbar.Collapse */}
+  
+      <div
+        className="d-flex align-items-center"
+        style={{ flexGrow: 1, justifyContent: "flex-end" }}
+      >
         <div
           className="d-flex align-items-center gap-2"
-          style={{ minWidth: "300px", flexGrow: 1 }}
+          style={{ width: "100%", maxWidth: "600px" }}
         >
           <Form.Select
             className="w-50"
@@ -64,7 +64,7 @@ function MyNav() {
             <option value="romance">Romance 👩‍❤️‍💋‍👩</option>
             <option value="scifi">Sci-fi 👽</option>
           </Form.Select>
-
+  
           <div className="position-relative w-100">
             <Form.Control
               className="pe-4"
@@ -84,8 +84,9 @@ function MyNav() {
             )}
           </div>
         </div>
-      </Container>
-    </Navbar>
+      </div>
+    </Container>
+  </Navbar>
   );
 }
 
