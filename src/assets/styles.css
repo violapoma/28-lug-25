@@ -49,7 +49,11 @@ a {
   font-size: 1.2rem;
   color: white;
 }
-
+.spinner{
+  text-align: center;
+  width: 6rem;
+  height: 6rem;
+}
 .pagination .page-item .page-link{
   color: blueviolet;
 }
@@ -108,16 +112,17 @@ a {
 }
 
 .commentArea{
-  height: 80%;
+  height: 100vh;
   width: 100%;
-  overflow-y: hidden ;
+  min-height: 100vh;
+
 } 
 
 .commentList{
   height: 100%;
   width: 100% !important;
-
   transition: height 0.3s ease;
+  overflow-y: hidden ;
 }
 .reduced{
   height: 60%;
@@ -127,9 +132,7 @@ a {
   max-width: 90%;
   height: 100%;
   object-fit: contain;
-
 }
-
 
 .commentList li{
   list-style: none;

@@ -31,7 +31,7 @@ function BookDetailsCard() {
   if (!book) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="d-flex align-items-center justify-content-center vh-100 ">
       <img className="bookDetailsImg" src={book.img} alt={book.title}></img>
     </div>
   ); 
