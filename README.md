@@ -1,9 +1,9 @@
-# EpiBook con React
-### final version
+# EpiBook con React ~ _final version_
+
 
 ## Test implementati
-- <MyAlert /> viene renderizzato correttamente 
-- <AllTheBooks /> renderizza massimo 21 card (scelta mia, visto che uso la paginazione)
-- <BookDetails /> monta correttamente </CommentArea>
-- <CommentArea /> renderizza i commenti (mock della fetch con due commenti)
+- **MyAlert** viene renderizzato correttamente 
+- **AllTheBooks** renderizza massimo 21 card (scelta mia, visto che uso la paginazione)
+- **BookDetails** monta correttamente CommentArea
+- **CommentArea** renderizza i commenti (mock della fetch con due commenti)
 
